@@ -1642,7 +1642,13 @@ function finalOutput(lines){
    PROGRAM LIBRARY
    ============================================================ */
 const MAIN=b=>["int main() {"].concat(b,["    return 0;","}"]);
-const PROG=(...parts)=>["#include <stdio.h>",""].concat(...parts);
+const NEEDS_STRING=/\b(strlen|strcpy|strcat|strcmp|strrev|strchr|strstr)\s*\(/;
+const PROG=(...parts)=>{
+  const body=[].concat(...parts);
+  const head=["#include <stdio.h>"];
+  if(body.some(l=>NEEDS_STRING.test(l))) head.push("#include <string.h>");
+  return head.concat([""],body);
+};
 
 const CONCEPTS=[
 { key:"arrays", name:"Arrays", programs:[
@@ -1805,6 +1811,9 @@ const CONCEPTS=[
     "    }"]))},
 
   {t:"strrev turns it around in place", code:PROG(
+    ["/* strrev is NOT part of standard C. It exists in Turbo C and in Microsoft's",
+     "   compiler. On gcc this program will not compile - see the next program,",
+     "   which reverses the string by hand and works everywhere. */",""],
     MAIN([
     '    char s[] = "stressed";',
     '    printf("before: %s\\n", s);',
@@ -1912,8 +1921,9 @@ const CONCEPTS=[
 
   {t:"The largest element, recursively", code:PROG([
     "int maxOf(int a[], int n) {",
+    "    int rest = 0;",
     "    if (n == 1) return a[0];",
-    "    int rest = maxOf(a, n - 1);",
+    "    rest = maxOf(a, n - 1);",
     "    if (a[n - 1] > rest) return a[n - 1];",
     "    return rest;",
     "}",""],
