@@ -319,11 +319,17 @@
         <div class="exp">
           <div class="num">5.1</div>
           <div>
-            <h4>Structures and Arrays of Structures</h4>
-            <p>Field layout in a memory block. Structures passed by value compared with by reference,
-            showing when a copy is made and when the original is modified.</p>
+            <h4><a href="exp-5-1-structures.html">Structures and Arrays of Structures</a></h4>
+            <p>A record drawn as one block with its members laid side by side, each at a known distance
+            from the start &mdash; and the measurement showing that a structure costs no more memory than
+            the same facts kept in separate variables. Arrays of records, with every record exactly one
+            record-length after the last, so <code>list[i]</code> is one multiplication away. A record
+            passed by value appears twice, once in each frame, so the function provably works on a copy;
+            passed by pointer, one record with an arrow reaching it. Functions that take a record and
+            return an updated one, and a search through an array of records that returns either the
+            record or its position &mdash; with a program showing why the difference matters.</p>
           </div>
-          <span class="status">Planned</span>
+          <span class="status live">Open</span>
         </div>
         <div class="exp">
           <div class="num">5.2</div>
