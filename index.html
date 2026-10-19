@@ -334,12 +334,18 @@
         <div class="exp">
           <div class="num">5.2</div>
           <div>
-            <h4>Dynamic Memory Allocation</h4>
-            <p>A live view of the heap through malloc, calloc, realloc and free. Uninitialised memory
-            compared with zeroed memory, the cost of resizing, and what a memory leak or a dangling
-            pointer looks like.</p>
+            <h4><a href="exp-5-2-dynamic-memory.html">Dynamic Memory Allocation</a></h4>
+            <p>The heap drawn as its own region below the frames, so a block asked for inside a function
+            can be watched staying exactly where it is after that function has returned. Boxes from
+            <code>malloc</code> shown as unwritten until the program fills them, against the zeros
+            <code>calloc</code> gives; <code>realloc</code> both growing a block in place and having to
+            move it, copying as it goes. The three mistakes that follow <code>free</code> &mdash; a
+            dangling pointer, a double free and a leak &mdash; each with a program that stops and
+            explains itself. Records built on the heap and handed back by a function, a linked list grown
+            and freed one node at a time, and an Explorer that measures three ways of holding values
+            whose number is not known in advance.</p>
           </div>
-          <span class="status">Planned</span>
+          <span class="status live">Open</span>
         </div>
         <div class="exp">
           <div class="num">5.3</div>
