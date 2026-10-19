@@ -350,11 +350,18 @@
         <div class="exp">
           <div class="num">5.3</div>
           <div>
-            <h4>File Handling</h4>
-            <p>The file position indicator moving through a text file as fscanf and fgets read from it,
-            and why testing feof after a read behaves differently from testing it before.</p>
+            <h4><a href="exp-5-3-file-handling.html">File Handling</a></h4>
+            <p>The file drawn beside the program with a marker for the read position, so each
+            <code>fscanf</code> or <code>fgets</code> can be watched moving through it &mdash; and the
+            file itself is editable, so every count changes with the data. Newlines shown as the
+            characters they are, which is what makes <code>fgets</code> keeping them make sense. The
+            <code>while (!feof(fp))</code> mistake set next to the correct loop, reporting six values for
+            a file of five. Counting lines, words and characters, beside a word counter that misses the
+            first word of every line. A frequency report as a list, as bars, and written out to a second
+            file with <code>fprintf</code>. An Explorer that reads any text you paste both as lines and as
+            numbers at once.</p>
           </div>
-          <span class="status">Planned</span>
+          <span class="status live">Open</span>
         </div>
       </div>
     </section>
