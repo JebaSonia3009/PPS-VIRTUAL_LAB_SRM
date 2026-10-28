@@ -4444,8 +4444,7 @@ function costHtml(step){
     <div class="trfoot">${
       deepest>1
         ? `${deepest} frames existed at the same moment. Every waiting call keeps its own copy of
-           everything it was given &mdash; so a structure passed by value is counted twice here, once
-           in each frame.`
+           everything it was given, and all of those copies are counted here.`
         : (passes
             ? `A loop keeps <strong>one</strong> frame however many passes it makes &mdash; the memory
                does not grow with the work.`
