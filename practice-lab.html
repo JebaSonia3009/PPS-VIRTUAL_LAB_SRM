@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Practice Lab — Guided Programs — PPS Virtual Lab</title>
+<title>Practice Lab — PPS Virtual Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -330,16 +330,16 @@
 <div class="shell">
   <nav class="side" id="nav"></nav>
   <main>
-    <h1>Practice Lab &mdash; Guided Programs</h1>
-    <div class="sub">All five units · 54 programs, easy first · Run them, check yourself, then write your own</div>
+    <h1>Practice Lab</h1>
+    <div class="sub">Programming for Problem Solving · All five units · Run the programs, check yourself, then write your own</div>
 
     <!-- DEMO -->
-    <section id="demo" class="on">
-      <h2>Programs</h2>
-      <p>Pick a unit, pick a program, and press <strong>Step</strong>. The program runs one line at a
-      time and the picture on the right shows what is happening inside the computer's memory as it goes
-      &mdash; which box holds what, and what changes on each line. Read the sentence underneath each
-      step before pressing Step again.</p>
+    <section id="guided" class="on">
+      <h2>Guided programs</h2>
+      <p>Fifty-four programs, covering all five units of the course. Pick a unit, pick a program, and
+      press <strong>Step</strong>. The program runs one line at a time and the picture on the right shows
+      what is happening inside the computer's memory as it goes &mdash; which box holds what, and what
+      changes on each line. Read the sentence underneath each step before pressing Step again.</p>
       <p class="note">The programs in each unit start easy and get a little harder as you go down the
       list. Work through them in order. Where a program has boxes above it, those are values you can
       change &mdash; change one and the program runs again straight away, so you can see what difference
@@ -459,7 +459,7 @@
 /* ============================================================
    NAVIGATION
    ============================================================ */
-const SECTIONS={demo:"Programs", posttest:"Check yourself", editor:"Write your own",
+const SECTIONS={guided:"Guided programs", posttest:"Check yourself", editor:"Write your own",
   contributors:"About"};
 const nav=document.getElementById("nav");
 Object.keys(SECTIONS).forEach((id,i)=>{
